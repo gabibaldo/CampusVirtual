@@ -1,0 +1,31 @@
+﻿@model List<Entidades.Menu>
+
+
+<table class="table table-bordered" id="ListaMenu" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Descripción</th>
+            <th>Controlador</th>
+            <th>Accion</th>
+            <th>Activo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdMenu</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Controlador</td>
+                <td>@item.Accion</td>
+                <td>@item.Activo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Volver", "Index", "Usuarios")
+</div>
